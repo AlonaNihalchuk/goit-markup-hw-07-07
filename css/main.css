@@ -153,6 +153,10 @@ svg {
   color: #2196f3;
 }
 
+.site-nav .link:hover::after, .site-nav .link:hover::after, .site-nav .link:focus::after, .site-nav .link:focus::after {
+  opacity: 1;
+}
+
 .site-nav .link::after {
   position: absolute;
   bottom: -1px;
@@ -165,11 +169,6 @@ svg {
   background-color: #2196f3;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.site-nav .link:hover::after,
-.site-nav .link:focus::after {
-  opacity: 1;
 }
 
 .site-nav .link.current {

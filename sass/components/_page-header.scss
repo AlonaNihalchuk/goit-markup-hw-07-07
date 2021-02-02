@@ -41,6 +41,11 @@
     &:hover,
     &:focus {
       color: $accent-color;
+
+      &::after,
+      &::after {
+        opacity: 1;
+      }
     }
 
     &::after {
@@ -57,10 +62,10 @@
     }
   }
 
-  .link:hover::after,
-  .link:focus::after {
-    opacity: 1;
-  }
+  // .link:hover::after,
+  // .link:focus::after {
+  //   opacity: 1;
+  // }
 
   .link.current {
     color: $accent-color;

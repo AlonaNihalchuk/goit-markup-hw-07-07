@@ -1,4 +1,4 @@
-.link, .contacts-link, .logo, .footer-contacts .mail, .footer-contacts .telefon {
+.site-nav .link, .contacts-link, .logo, .footer-contacts .mail, .footer-contacts .telefon {
   text-decoration: none;
   display: block;
 }
@@ -38,7 +38,7 @@
   margin-right: auto;
 }
 
-.link, .contacts-link {
+.site-nav .link, .contacts-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -140,7 +140,7 @@ svg {
   margin-right: 50px;
 }
 
-.link {
+.site-nav .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -149,19 +149,11 @@ svg {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link .current {
+.site-nav .link:hover, .site-nav .link:focus {
   color: #2196f3;
 }
 
-.link .current::after {
-  opacity: 1;
-}
-
-.link:hover, .link:focus {
-  color: #2196f3;
-}
-
-.link::after {
+.site-nav .link::after {
   position: absolute;
   bottom: -1px;
   border-radius: 2px;
@@ -175,13 +167,16 @@ svg {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link::after .link:hover::after,
-.link::after .link:focus::after {
+.site-nav .link:hover::after,
+.site-nav .link:focus::after {
   opacity: 1;
 }
 
-.link:hover::after,
-.link:focus::after {
+.site-nav .link.current {
+  color: #2196f3;
+}
+
+.site-nav .link.current::after {
   opacity: 1;
 }
 
@@ -248,8 +243,8 @@ svg {
   margin-right: auto;
   background-size: cover;
   background-position: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/backgroung-image.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/backgroung-image.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/backgroung-image.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/backgroung-image.jpg");
   text-align: center;
   background-color: #2f303a;
 }

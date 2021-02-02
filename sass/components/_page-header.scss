@@ -28,55 +28,48 @@
   .item:not(:last-child) {
     margin-right: 50px;
   }
-}
 
-.link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  @extend %a;
-  color: $title-text-color;
-  @extend %link-font;
-  @include transitioned(color);
-
-  .current {
-    color: $accent-color;
-
-    &::after {
-      opacity: 1;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
-
-    // относится к after
-    &::after,
-    &::after {
-      opacity: 1;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    bottom: -1px;
-    border-radius: 2px;
-    content: "";
+  .link {
     display: block;
-    width: 100%;
-    height: 4px;
-    opacity: 0;
-    background-color: $accent-color;
-    @include transitioned(opacity);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @extend %a;
+    color: $title-text-color;
+    @extend %link-font;
+    @include transitioned(color);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -1px;
+      border-radius: 2px;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      opacity: 0;
+      background-color: $accent-color;
+      @include transitioned(opacity);
+    }
+  }
+
+  .link:hover::after,
+  .link:focus::after {
+    opacity: 1;
+  }
+
+  .link.current {
+    color: $accent-color;
+
+    &::after {
+      opacity: 1;
+    }
   }
 }
-
-// либо так
-// .link:hover::after,
-// .link:focus::after {
-//   opacity: 1;
-// }
 
 .contacts {
   display: flex;
